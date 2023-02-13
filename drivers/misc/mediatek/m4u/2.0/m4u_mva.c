@@ -12,7 +12,7 @@
  */
 
 #include <linux/spinlock.h>
-#include "m4u_priv.h"
+#include "../mt6797/m4u_priv.h"
 
 /* ((va&0xfff)+size+0xfff)>>12 */
 #define mva_pageOffset(mva) ((mva)&0xfff)

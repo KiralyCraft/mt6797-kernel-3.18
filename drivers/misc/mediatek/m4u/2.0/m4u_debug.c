@@ -18,7 +18,7 @@
 #include <linux/module.h>
 
 #include "m4u_debug.h"
-#include "m4u_priv.h"
+#include "../mt6797/m4u_priv.h"
 
 
 /* global variables */

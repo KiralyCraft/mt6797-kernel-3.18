@@ -33,7 +33,7 @@ LCM_DSI_MODE_CON lcm_dsi_mode;
 #define LCD_DEBUG(fmt, args...)  pr_debug("[KERNEL/LCM]"fmt, ##args)
 #endif
 
-LCM_DRIVER *lcm_driver_list[] = {
+LCM_DRIVER *lcm_driver_list[6] = {
 #if defined(R63419_WQHD_BOYI_VDO)
 	&r63419_wqhd_boyi_vdo_lcm_drv,
 #endif
@@ -64,7 +64,7 @@ unsigned char lcm_name_list[][128] = {
 #define LCM_COMPILE_ASSERT_XX(condition, line) char assertion_failed_at_line_##line[(condition) ? 1 : -1]
 
 unsigned int lcm_count = sizeof(lcm_driver_list) / sizeof(LCM_DRIVER *);
-LCM_COMPILE_ASSERT(0 != sizeof(lcm_driver_list) / sizeof(LCM_DRIVER *));
+LCM_COMPILE_ASSERT(0 != (sizeof(lcm_driver_list) / sizeof(LCM_DRIVER *)));
 #if defined(NT35520_HD720_DSI_CMD_TM) | defined(NT35520_HD720_DSI_CMD_BOE) | \
 	defined(NT35521_HD720_DSI_VDO_BOE) | defined(NT35521_HD720_DSI_VIDEO_TM)
 static unsigned char lcd_id_pins_value = 0xFF;

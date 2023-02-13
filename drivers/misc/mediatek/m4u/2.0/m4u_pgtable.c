@@ -15,7 +15,7 @@
 #include <linux/slab.h>
 #include <linux/dma-mapping.h>
 
-#include "m4u_priv.h"
+#include "../mt6797/m4u_priv.h"
 
 typedef struct {
 	imu_pgd_t *pgd;
